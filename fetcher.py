@@ -28,7 +28,7 @@ class ArticleFetcher():
                     articles.append(crawled)
 
             else:
-                # bessere Lösung möglich? ev. len()?
+                # bessere Lösung möglich? ev. len()? range soll die Anzahl der Seiten angeben!
                 for a in range(6):
                     for url in doc.find_all('a', href = True):
                         new_url = urljoin(web_url,url.get('href'))
