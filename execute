@@ -1,3 +1,5 @@
+form fetcher import *
+
 crawledarticle = ArticleFetcher()
 crawledarticle.fetch()
 results = crawledarticle.fetch()
