@@ -38,20 +38,3 @@ class ArticleFetcher():
         
         return articles
     
-
-                    r = requests.get(new_url)
-                    doc = BeautifulSoup(r.text, "html.parser")
-
-
-                    for card in doc.select(".card"):
-                        emoji = card.select_one(".emoji").text
-                        content = card.select_one(".card-text").text
-                        title = card.select(".card-title span")[1].text
-                        image = urljoin(web_url, card.select_one("img").attrs["src"])
-
-                        crawled = CrawledArticle(title, emoji, content, image)
-                        articles.append(crawled)
-
-
-
-        return articles
